@@ -14,7 +14,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 const URL = "https://tgtrckfjoavvvthahkow.supabase.co";
 // Sustituye únicamente esta clave si cambia la clave publicable del proyecto.
 const PUBLIC_KEY='sb_publishable_J_7L0VnwsyQ5T4ge7WY6wg_EXa3BYwh';
-const API=URL+'/functions/v1/dashboard-valores';
+const API_URL = `${URL}/functions/v1/dashboard-valores`;
 const supabase=createClient(URL,PUBLIC_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}});
 const $=id=>document.getElementById(id);let payload=null;let currentSession=null;
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
